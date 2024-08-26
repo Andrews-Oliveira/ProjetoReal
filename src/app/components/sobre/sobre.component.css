@@ -1,0 +1,63 @@
+.about-section {
+  display: flex; /* Use flexbox para um layout mais controlado */
+  justify-content: space-between;
+  padding: 200px;
+}
+
+.content {
+  max-width: 60%;
+  text-align: justify; /* Justifica o texto */
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  color: #00c2c6;
+  margin-bottom: 20px;
+}
+
+.content h2 span {
+  color: #00c2c6;
+  margin-right: 10px;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #d3d3d3;
+}
+
+.content p a {
+  color: #00c2c6;
+  text-decoration: none;
+}
+
+.technologies {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.image {
+  position: relative; /* Adiciona a posição relativa se precisar mover a imagem */
+}
+
+.image img {
+  width: 400px;
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Aplica o raio de borda de 10px a todos os cantos */
+  position: relative; /* Necessário para que top funcione */
+  top: 125px; /* Ajuste este valor conforme necessário */
+}
+
+
+
+/*#linha {*/
+/*  padding-top: -2000px;*/
+/*  padding-left: 1000px;*/
+/*  width: 27%;*/
+/*  border-bottom: 1px solid rgb(84, 102, 241);*/
+/*}*/

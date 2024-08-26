@@ -1,0 +1,27 @@
+<header [ngClass]="{'hidden': isHidden}" class="header">
+  <nav class="nav-bar">
+    <div class="logo">
+      <h1>
+        <span style="color: white;">Rota </span> <span style="color: lightseagreen;">PRO</span>
+      </h1>
+    </div>
+    <div class="login-nav-container">
+      <div class="nav-list">
+        <ul>
+          <li class="nav-item">
+            <a routerLink="/home" class="nav-link" style="color: lightseagreen;">Início</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contato" class="nav-link" style="color: lightseagreen;">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/sobre" class="nav-link" style="color: lightseagreen;">Sobre</a>
+          </li>
+        </ul>
+      </div>
+      <div class="login-button">
+        <button [routerLink]="'login'">Entrar</button>
+      </div>
+    </div>
+  </nav>
+</header>

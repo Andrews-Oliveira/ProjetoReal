@@ -1,11 +1,4 @@
-<router-outlet/>
-<nav>
-  <a routerLink="login">Login</a>
-  <br>
-  <a routerLink="registro">Registro</a>
-</nav>
-<br>
-<nav>
-  <br>
-<a routerLink="place-picker">Geolocalizacao</a>
-</nav>
+<app-header *ngIf="showHeaderAndFooter"></app-header>
+<app-sobre *ngIf="showHeaderAndFooter"></app-sobre>
+<router-outlet></router-outlet>
+<app-footer *ngIf="showHeaderAndFooter"></app-footer>
