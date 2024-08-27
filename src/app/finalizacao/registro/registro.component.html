@@ -1,27 +1,117 @@
-<form>
-<div class="container">
-  <h2>Registro de Rotas WM</h2>
+<form #form="ngForm">
+  <div class="container">
+    <h2>Formulário Rota <span style="color: lightseagreen;">PRO</span></h2>
 
-  <label for="motorista">Nome do Motorista:</label>
-  <input type="text" id="motorista" name="motorista">
+    <!-- Nome do Motorista -->
+    <div>
+      <label for="motorista">Nome do Motorista:</label>
+      <input
+        type="text"
+        id="motorista"
+        name="motorista"
+        ngModel
+        required
+        placeholder="Nome do Motorista"
+        #motorista="ngModel"
+      >
+      <div class="error-message" *ngIf="motorista.invalid && (motorista.dirty || motorista.touched)">
+        <div *ngIf="motorista.errors?.['required']">
+          O nome do motorista é obrigatório.
+        </div>
+      </div>
+    </div>
+    <br>
 
-  <label for="data">Data:</label>
-  <input type="date" id="data" name="data">
+    <!-- Data -->
+    <div>
+      <label for="data">Data:</label>
+      <input
+        type="date"
+        id="data"
+        name="data"
+        ngModel
+        required
+        #data="ngModel"
+      >
+      <div class="error-message" *ngIf="data.invalid && (data.dirty || data.touched)">
+        <div *ngIf="data.errors?.['required']">
+          A data é obrigatória.
+        </div>
+      </div>
+    </div>
+    <br>
 
-  <label for="fabrica">Nome da Fábrica:</label>
-  <input type="text" id="fabrica" name="fabrica">
+    <!-- Nome da Fábrica -->
+    <div>
+      <label for="fabrica">Nome da Fábrica:</label>
+      <input
+        type="text"
+        id="fabrica"
+        name="fabrica"
+        ngModel
+        required
+        placeholder="Nome da Fábrica"
+        #fabrica="ngModel"
+      >
+      <div class="error-message" *ngIf="fabrica.invalid && (fabrica.dirty || fabrica.touched)">
+        <div *ngIf="fabrica.errors?.['required']">
+          O nome da fábrica é obrigatório.
+        </div>
+      </div>
+    </div>
+    <br>
 
-  <label for="funcionarios">Quantidade de Funcionários:</label>
-  <input type="number" id="funcionarios" name="funcionarios">
+    <!-- Quantidade de Funcionários -->
+    <div>
+      <label for="funcionarios">Quantidade de Funcionários:</label>
+      <input
+        type="number"
+        id="funcionarios"
+        name="funcionarios"
+        ngModel
+        required
+        placeholder="Quantidade de Funcionários"
+        #funcionarios="ngModel"
+      >
+      <div class="error-message" *ngIf="funcionarios.invalid && (funcionarios.dirty || funcionarios.touched)">
+        <div *ngIf="funcionarios.errors?.['required']">
+          A quantidade de funcionários é obrigatória.
+        </div>
+      </div>
+    </div>
+    <br>
 
-  <label for="turno">Turno:</label>
-  <select id="turno" name="turno">
-    <option value="comercial">Comercial</option>
-    <option value="1">1º Turno</option>
-    <option value="2">2º Turno</option>
-    <option value="3">3º Turno</option>
-  </select>
+    <!-- Turno -->
+    <div>
+      <label for="turno">Turno:</label>
+      <select
+        id="turno"
+        name="turno"
+        ngModel
+        required
+        #turno="ngModel"
+      >
+        <option value="">Selecione um turno</option>
+        <option value="comercial">Comercial</option>
+        <option value="1">1º Turno</option>
+        <option value="2">2º Turno</option>
+        <option value="3">3º Turno</option>
+      </select>
+      <div class="error-message" *ngIf="turno.invalid && (turno.dirty || turno.touched)">
+        <div *ngIf="turno.errors?.['required']">
+          O turno é obrigatório.
+        </div>
+      </div>
+    </div>
+    <br>
 
-  <button [routerLink]="['/login']"  type="submit">Enviar</button>
-</div>
+    <!-- Botão -->
+    <button
+      type="submit"
+      [disabled]="!form.valid"
+      [routerLink]="['/login']"
+    >
+      Enviar
+    </button>
+  </div>
 </form>

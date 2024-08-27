@@ -1,19 +1,21 @@
-import {Component, OnInit} from '@angular/core';
-import {NavigationEnd, Router} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   showHeaderAndFooter = true;
 
-  constructor(private router: Router) {
+  constructor(private router: Router) {}
+
+  ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        // Verifique a rota atual para decidir se deve mostrar o cabeçalho e rodapé
-        this.showHeaderAndFooter = !['/login'].includes(event.urlAfterRedirects);
+        console.log('URL após redirecionamento:', event.urlAfterRedirects);
+        this.showHeaderAndFooter = !['/login', '/registro'].includes(event.urlAfterRedirects);
       }
     });
   }

@@ -1,39 +1,148 @@
-
-
-div{
-  background-color: rgba(0, 0, 0, 0.9);
+.container {
+  background-color: rgb(30, 30, 30); /* Fundo escuro com um pouco de transparência */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  padding: 80px;
-  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  padding: 30px; /* Padding reduzido para manter o design mais compacto */
+  border-radius: 15px; /* Bordas arredondadas */
   color: #fff;
-
+  width: 90%; /* Ajustado a largura para 90% da tela */
+  max-width: 300px; /* Largura máxima reduzida */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra suave ao redor */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+  text-align: center; /* Centraliza o texto */
 }
 
-input{
+/* Estilo para os inputs e selects */
+input {
   padding: 15px;
   border: none;
   outline: none;
   font-size: 15px;
-
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  width: 70%; /* Largura dos inputs ajustada para ocupar toda a largura do contêiner */
+  margin-bottom: 15px; /* Espaçamento inferior */
 }
 
-button{
+/* Estilo para o botão */
+button {
   background-color: rgb(11, 125, 179);
   border: none;
   padding: 15px;
-  width: 100%;
+  width: 40%;
   border-radius: 10px;
-  color:white;
+  color: white;
   font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave para hover */
 }
 
-button:hover{
+/* Estilo para o botão quando passa o mouse */
+button:hover {
   background-color: deepskyblue;
-  cursor: pointer;
 }
-.container{
-  text-align: center;
+
+/* Estilo para mensagens de erro */
+.error-message {
+  color: #ef4d45; /* Cor de erro leve */
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: left; /* Alinha a mensagem à esquerda */
 }
+
+/* Estilo para inputs inválidos */
+input.ng-invalid.ng-touched {
+  border: 1px solid #ffdddd; /* Borda vermelha para campos inválidos */
+}
+
+
+
+/*.container {*/
+/*  background-color: rgba(0, 0, 0, 0.9);*/
+/*  position: absolute;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  transform: translate(-50%, -50%);*/
+/*  padding: 80px;*/
+/*  border-radius: 15px;*/
+/*  color: #fff;*/
+/*  text-align: center;*/
+/*}*/
+
+/*input {*/
+/*  padding: 15px;*/
+/*  border: none;*/
+/*  outline: none;*/
+/*  font-size: 15px;*/
+/*  border-radius: 5px;*/
+/*  background-color: #333;*/
+/*  color: #fff;*/
+/*}*/
+
+/*button {*/
+/*  background-color: rgb(11, 125, 179);*/
+/*  border: none;*/
+/*  padding: 15px;*/
+/*  width: 100%;*/
+/*  border-radius: 10px;*/
+/*  color: white;*/
+/*  font-size: 15px;*/
+/*}*/
+
+/*button:hover {*/
+/*  background-color: deepskyblue;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*.error-message {*/
+/*  color: #ffdddd;*/
+/*  font-size: 14px;*/
+/*  margin-top: 5px;*/
+/*  text-align: left;*/
+/*}*/
+
+/*input.ng-invalid.ng-touched {*/
+/*  border: 1px solid #ffdddd;*/
+/*}*/
+
+
+/*div{*/
+/*  background-color: rgba(0, 0, 0, 0.9);*/
+/*  position: absolute;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  transform: translate(-50%,-50%);*/
+/*  padding: 80px;*/
+/*  border-radius: 15px;*/
+/*  color: #fff;*/
+
+/*}*/
+
+/*input{*/
+/*  padding: 15px;*/
+/*  border: none;*/
+/*  outline: none;*/
+/*  font-size: 15px;*/
+
+/*}*/
+
+/*button{*/
+/*  background-color: rgb(11, 125, 179);*/
+/*  border: none;*/
+/*  padding: 15px;*/
+/*  width: 100%;*/
+/*  border-radius: 10px;*/
+/*  color:white;*/
+/*  font-size: 15px;*/
+/*}*/
+
+/*button:hover{*/
+/*  background-color: deepskyblue;*/
+/*  cursor: pointer;*/
+/*}*/
+/*.container{*/
+/*  text-align: center;*/
+/*}*/

@@ -1,40 +1,54 @@
-/* Se desejar um fundo escuro para o contêiner */
+/* Estilo para o contêiner do formulário */
 .container {
-  background-color: rgba(0, 0, 0, 0.9); /* Descomente esta linha se desejar um fundo escuro */
+  background-color: #1e1e1e; /* Fundo escuro, menos transparente */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 80px;
-  border-radius: 15px;
+  padding: 30px;
+  border-radius: 10px; /* Bordas arredondadas mais sutis */
   color: #fff;
-  width: 100%;
-  max-width: 400px;
-  text-align: center; /* Centraliza o texto e os elementos dentro do contêiner */
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
+/* Estilo para os inputs e selects */
 input, select {
-  padding: 15px;
-  border: none;
+  padding: 12px;
+  border: 1px solid #444; /* Borda escura para um contraste mais suave */
   outline: none;
-  font-size: 15px;
-  width: 100%;
-  margin-bottom: 20px; /* Espaço abaixo dos campos */
-  border-radius: 5px;
-  box-sizing: border-box; /* Inclui padding e border na largura total do campo */
+  font-size: 14px;
+  border-radius: 5px; /* Bordas arredondadas mais sutis */
+  margin-bottom: 15px; /* Espaçamento inferior aumentado para separar melhor os elementos */
+  background-color: #333; /* Fundo escuro para inputs e selects */
+  color: #fff; /* Texto branco para contraste */
+  width: calc(100% - 24px); /* Ajuste da largura para considerar o padding */
+  box-sizing: border-box; /* Inclui o padding e a borda na largura total */
 }
 
+/* Estilo para o botão */
 button {
-  background-color: rgb(11, 125, 179);
+  background-color: #007bff; /* Azul mais suave */
   border: none;
-  padding: 15px;
-  width: 100%; /* Faz o botão ocupar toda a largura disponível */
-  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px; /* Bordas arredondadas mais sutis */
   color: white;
-  font-size: 15px;
+  font-size: 15px; /* Tamanho de fonte ajustado */
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
 }
 
+/* Estilo para o botão quando passa o mouse */
 button:hover {
-  background-color: deepskyblue; /* Cor de fundo ao passar o mouse */
+  background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+  transform: scale(1.02); /* Leve aumento para efeito de clique */
+}
+
+/* Estilo para mensagens de erro */
+.error-message {
+  color: #ff4d4d; /* Vermelho intenso para erros */
+  font-size: 0.875rem;
+  margin-top: 5px;
 }

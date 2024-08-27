@@ -1,11 +1,62 @@
-<form>
+<form #form="ngForm">
   <div class="container">
-    <h1>Login WM</h1>
-    <input type="email" placeholder="E-mail">
+    <h1>
+      Rota <span style="color: lightseagreen;">PRO</span>
+    </h1>
+
+    <!-- Campo de E-mail -->
+    <div class="form-group">
+      <input
+        type="email"
+        name="email"
+        ngModel
+        required
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        placeholder="E-mail"
+        #email="ngModel"
+        class="form-control"
+      >
+      <div class="error-message" *ngIf="email.invalid && (email.dirty || email.touched)">
+        <div *ngIf="email.errors?.['required']">
+          O e-mail é obrigatório.
+        </div>
+        <div *ngIf="email.errors?.['pattern']">
+          O e-mail deve conter um &#64; e um domínio válido.
+        </div>
+        <div *ngIf="email.errors?.['email']">
+          O e-mail deve ser válido.
+        </div>
+      </div>
+    </div>
     <br><br>
-    <input type="password" placeholder="Senha">
+
+    <!-- Campo de Senha -->
+    <div class="form-group">
+      <input
+        type="password"
+        name="password"
+        ngModel
+        required
+        placeholder="Senha"
+        #password="ngModel"
+        class="form-control"
+      >
+      <div class="error-message" *ngIf="password.invalid && (password.dirty || password.touched)">
+        <div *ngIf="password.errors?.['required']">
+          A senha é obrigatória.
+        </div>
+      </div>
+    </div>
     <br><br>
-    <!-- O botão redireciona para a rota de registro -->
-    <button type="button" [routerLink]="['/registro']">ENTRAR</button>
+
+    <!-- Botão -->
+    <button
+      type="button"
+      [routerLink]="['/registro']"
+      [disabled]="!form.valid"
+      class="submit-button"
+    >
+      ENTRAR
+    </button>
   </div>
 </form>
