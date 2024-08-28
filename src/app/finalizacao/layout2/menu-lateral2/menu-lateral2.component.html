@@ -1,0 +1,7 @@
+<!-- sidebar.component.html -->
+<div class="sidebar" [ngClass]="{'active': isSidebarOpen}">
+  <ul>
+    <li><a href="#" (click)="navigateToLogin()">Ir para tela inicial</a></li>
+  </ul>
+</div>
+<button class="menu-btn" (click)="toggleSidebar()">&#9776; Menu</button>

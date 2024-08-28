@@ -15,6 +15,10 @@ import { HeaderComponent } from './components/geral/header/header.component';
 import { LayoutComponent } from './layout/layout.component';
 import { FinalizacaoComponent } from './finalizacao/finalizacao.component';
 import {FormsModule} from "@angular/forms";
+// import { Layout2Component } from "./finalizacao/layout2/layout2.component";
+import { MenuLateralComponent } from './finalizacao/layout2/menu-lateral/menu-lateral.component';
+import { MenuLateral2Component } from './finalizacao/layout2/menu-lateral2/menu-lateral2.component';
+// import { NavBarComponent } from './finalizacao/layout2/nav-bar/nav-bar.component';
 // import { AuthLayoutrComponent } from './auth-layoutr/auth-layoutr.component';
 
 
@@ -32,6 +36,10 @@ import {FormsModule} from "@angular/forms";
     // AuthLayoutComponent,
     LayoutComponent,
     FinalizacaoComponent,
+    // Layout2Component,
+    MenuLateralComponent,
+    MenuLateral2Component,
+
     // AuthLayoutrComponent,
 
   ],

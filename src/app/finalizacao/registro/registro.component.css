@@ -1,41 +1,88 @@
 /* Estilo para o contêiner do formulário */
 .container {
-  background-color: #1e1e1e; /* Fundo escuro, menos transparente */
+  background-color: #1e1e1e; /* Fundo escuro */
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 30px;
-  border-radius: 10px; /* Bordas arredondadas mais sutis */
+  padding: 40px; /* Diminuiu o padding */
+  border-radius: 8px; /* Bordas arredondadas ajustadas */
   color: #fff;
-  width: 90%;
-  max-width: 500px;
+  width: 100%; /* Diminuído a largura */
+  max-width: 800px; /* Diminuído a largura máxima */
+  box-sizing: border-box;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
-/* Estilo para os inputs e selects */
-input, select {
-  padding: 12px;
-  border: 1px solid #444; /* Borda escura para um contraste mais suave */
-  outline: none;
-  font-size: 14px;
-  border-radius: 5px; /* Bordas arredondadas mais sutis */
-  margin-bottom: 15px; /* Espaçamento inferior aumentado para separar melhor os elementos */
-  background-color: #333; /* Fundo escuro para inputs e selects */
-  color: #fff; /* Texto branco para contraste */
-  width: calc(100% - 24px); /* Ajuste da largura para considerar o padding */
+/* Estilo para o título */
+h2 {
+  text-align: center;
+  margin-bottom: 15px; /* Ajustado o espaçamento */
+  color: #fff;
+}
+
+/* Estilo para as linhas do formulário */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px; /* Ajustado o espaçamento */
+}
+
+/* Estilo para os grupos de formulário */
+.form-group {
+  flex: 1;
+  min-width: 220px; /* Diminuído o tamanho mínimo */
+  margin-right: 30px; /* Diminuído o espaçamento */
+  margin-bottom: 10px; /* Ajustado o espaçamento */
+}
+
+.form-group:last-child {
+  margin-right: 0;
+}
+
+/* Estilo para os rótulos */
+label {
+  display: block;
+  margin-bottom: 8px; /* Diminuído o espaçamento */
+  color: #aaa;
+  font-size: 15px; /* Ajustado o tamanho da fonte */
+}
+
+/* Estilo para os inputs, selects e textarea */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="email"],
+input[type="time"],
+select,
+textarea {
+  width: calc(100% - 24px); /* Ajusta para considerar o padding */
+  padding: 10px; /* Diminuído o padding */
+  border: 1px solid #444; /* Borda escura */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 13px; /* Ajustado o tamanho da fonte */
+  margin-bottom: 12px; /* Diminuído o espaçamento inferior */
+  background-color: #333; /* Fundo escuro */
+  color: #fff; /* Texto branco */
   box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+}
+
+textarea {
+  resize: vertical;
+  height: 80px; /* Ajustada a altura */
 }
 
 /* Estilo para o botão */
 button {
-  background-color: #007bff; /* Azul mais suave */
+  background-color: #007bff; /* Azul suave */
   border: none;
-  padding: 12px;
-  width: 100%;
-  border-radius: 5px; /* Bordas arredondadas mais sutis */
+  padding: 10px; /* Diminuído o padding */
+  width: 30%;
+  margin-left: 33%;
+  border-radius: 5px; /* Bordas arredondadas */
   color: white;
-  font-size: 15px; /* Tamanho de fonte ajustado */
+  font-size: 14px; /* Ajustado o tamanho da fonte */
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
 }
