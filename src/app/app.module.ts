@@ -22,8 +22,7 @@ import {ApiService} from "./services/api.service";
 import {HttpClientModule} from "@angular/common/http";
 // import { NavBarComponent } from './finalizacao/layout2/nav-bar/nav-bar.component';
 // import { AuthLayoutrComponent } from './auth-layoutr/auth-layoutr.component';
-
-
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +45,7 @@ import {HttpClientModule} from "@angular/common/http";
 
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

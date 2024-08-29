@@ -1,7 +1,7 @@
 .about-section {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column; /* Layout em coluna para os blocos */
+  gap: 40px; /* Espaçamento entre os blocos */
   padding: 125px 20px; /* Ajuste para garantir espaçamento adequado */
   box-sizing: border-box;
   margin-top: 100px;
@@ -9,51 +9,76 @@
 
 .about-item {
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas se necessário */
-  justify-content: space-between;
-  margin-bottom: 40px; /* Espaçamento entre os blocos */
+  flex-direction: row; /* Layout em linha para conteúdo e imagem */
+  gap: 20px; /* Espaçamento entre o texto e a imagem */
+  align-items: center; /* Alinhamento centralizado */
 }
 
-.content {
+.content,
+.content2,
+.content4 {
   flex: 1;
   max-width: 60%;
   text-align: justify;
-  padding-right: 20px;
 }
 
-.content h2 {
+.content h2,
+.content2 h2,
+.content4 h2 {
   font-size: 1.8rem;
   color: #00c2c6;
   margin-bottom: 20px;
 }
 
-.content h2 span {
+.content h2 span,
+.content2 h2 span,
+.content4 h2 span {
   color: #00c2c6;
   margin-right: 10px;
 }
 
-.content p {
+.content p,
+.content2 p,
+.content4 p {
   font-size: 1.09rem;
   line-height: 1.6;
   margin-bottom: 15px;
   color: #d3d3d3;
 }
 
-.content p a {
+.content p a,
+.content2 p a,
+.content4 p a {
   color: #00c2c6;
   text-decoration: none;
 }
 
-.image {
+.image,
+.image2,
+.image4 {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
-.image img {
+.image img,
+.image2 img,
+.image4 img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+/* Ajustes adicionais para garantir que o layout se ajuste adequadamente */
+@media (max-width: 768px) {
+  .about-item {
+    flex-direction: column; /* Layout em coluna em telas menores */
+  }
+
+  .content,
+  .content2,
+  .content4 {
+    max-width: 100%;
+  }
 }

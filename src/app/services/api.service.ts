@@ -1,18 +1,25 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'; // Importar HttpClient
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Fabrica } from '../Models/fabrica'; // Ajuste o caminho conforme necessário
+import {Motorista} from "../Models/motorista";
+import {Fabrica} from "../Models/fabrica";
 
 @Injectable({
-  providedIn: 'root' // Isso torna o serviço disponível em toda a aplicação
+  providedIn: 'root'
 })
 export class ApiService {
-
-  private apiUrl = 'http://127.0.0.1:8000/api/fabrica/'; // URL da API
-
+  private apiUrl = 'http://127.0.0.1:8000/api/motorista/'; // URL da sua API
+  private apiUrlfabrica = 'http://127.0.0.1:8000/api/fabrica/';
   constructor(private http: HttpClient) { }
 
-  getFabrica(): Observable<Fabrica[]> {
-    return this.http.get<Fabrica[]>(`${this.apiUrl}`);
+  public enviarMotorista(motorista: Motorista): Observable<Motorista> {
+    return this.http.post<Motorista>(this.apiUrl, motorista);
   }
+  public enviarFabrica(fabrica: Fabrica): Observable<Fabrica> {
+    return this.http.post<Fabrica>(this.apiUrlfabrica, fabrica);
+  }
+
+  // enviarMotorista(data: any): Observable<any> {
+  //   return this.http.post(this.apiUrl, data);
+
 }
