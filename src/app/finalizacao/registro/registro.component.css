@@ -2,22 +2,22 @@
 .container {
   background-color: #1e1e1e; /* Fundo escuro */
   position: absolute;
-  top: 54%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 40px; /* Diminuiu o padding */
-  border-radius: 8px; /* Bordas arredondadas ajustadas */
+  padding: 50px;
+  border-radius: 8px;
   color: #fff;
-  width: 100%; /* Diminuído a largura */
-  max-width: 800px; /* Diminuído a largura máxima */
+  width: 100%;
+  max-width: 1000px;
   box-sizing: border-box;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo para o título */
 h2 {
   text-align: center;
-  margin-bottom: 15px; /* Ajustado o espaçamento */
+  margin-bottom: 15px;
   color: #fff;
 }
 
@@ -26,15 +26,15 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 15px; /* Ajustado o espaçamento */
+  margin-bottom: 15px;
 }
 
 /* Estilo para os grupos de formulário */
 .form-group {
   flex: 1;
-  min-width: 220px; /* Diminuído o tamanho mínimo */
-  margin-right: 30px; /* Diminuído o espaçamento */
-  margin-bottom: 10px; /* Ajustado o espaçamento */
+  min-width: 220px;
+  margin-right: 30px;
+  margin-bottom: 10px;
 }
 
 .form-group:last-child {
@@ -44,9 +44,9 @@ h2 {
 /* Estilo para os rótulos */
 label {
   display: block;
-  margin-bottom: 8px; /* Diminuído o espaçamento */
+  margin-bottom: 8px;
   color: #aaa;
-  font-size: 15px; /* Ajustado o tamanho da fonte */
+  font-size: 15px;
 }
 
 /* Estilo para os inputs, selects e textarea */
@@ -57,45 +57,38 @@ input[type="email"],
 input[type="time"],
 select,
 textarea {
-  width: calc(100% - 24px); /* Ajusta para considerar o padding */
-  padding: 10px; /* Diminuído o padding */
-  border: 1px solid #444; /* Borda escura */
-  border-radius: 5px; /* Bordas arredondadas */
-  font-size: 13px; /* Ajustado o tamanho da fonte */
-  margin-bottom: 12px; /* Diminuído o espaçamento inferior */
-  background-color: #333; /* Fundo escuro */
-  color: #fff; /* Texto branco */
-  box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+  width: calc(100% - 24px);
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-bottom: 12px;
+  background-color: #333;
+  color: #fff;
+  box-sizing: border-box;
 }
 
-textarea {
-  resize: vertical;
-  height: 80px; /* Ajustada a altura */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa; /* Cor do placeholder */
 }
 
 /* Estilo para o botão */
 button {
-  background-color: #007bff; /* Azul suave */
+  background-color: #007bff;
   border: none;
-  padding: 10px; /* Diminuído o padding */
+  padding: 10px;
   width: 30%;
   margin-left: 33%;
-  border-radius: 5px; /* Bordas arredondadas */
+  border-radius: 5px;
   color: white;
-  font-size: 14px; /* Ajustado o tamanho da fonte */
+  font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Estilo para o botão quando passa o mouse */
 button:hover {
-  background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
-  transform: scale(1.02); /* Leve aumento para efeito de clique */
-}
-
-/* Estilo para mensagens de erro */
-.error-message {
-  color: #ff4d4d; /* Vermelho intenso para erros */
-  font-size: 0.875rem;
-  margin-top: 5px;
+  background-color: #0056b3;
+  transform: scale(1.02);
 }

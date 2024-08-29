@@ -1,17 +1,24 @@
 .about-section {
   display: flex;
-  flex-wrap: wrap; /* Permite que o conteúdo se ajuste em várias linhas se necessário */
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 125px; /* Ajustado para evitar excesso de espaço nas laterais */
-  box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
-margin-top: 100px;
+  padding: 125px 20px; /* Ajuste para garantir espaçamento adequado */
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+
+.about-item {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas se necessário */
+  justify-content: space-between;
+  margin-bottom: 40px; /* Espaçamento entre os blocos */
 }
 
 .content {
-  flex: 1; /* Permite que o conteúdo ocupe o espaço disponível */
-  max-width: 60%; /* Limita a largura máxima do conteúdo */
+  flex: 1;
+  max-width: 60%;
   text-align: justify;
-  padding-right: 20px; /* Espaçamento interno à direita para separar do texto e imagem */
+  padding-right: 20px;
 }
 
 .content h2 {
@@ -38,84 +45,15 @@ margin-top: 100px;
 }
 
 .image {
-  flex: 1; /* Permite que a imagem ocupe o espaço disponível */
+  flex: 1;
   display: flex;
-  justify-content: center; /* Centraliza a imagem horizontalmente */
-  align-items: center; /* Centraliza a imagem verticalmente */
-  padding: 20px; /* Adiciona espaçamento interno */
-  margin-top: 20px; /* Espaço acima da imagem para separar do texto */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .image img {
-  max-width: 100%; /* Ajusta a imagem para se ajustar ao contêiner */
-  height: auto; /* Mantém a proporção da imagem */
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
 }
-
-
-
-
-
-/*.about-section {*/
-/*  display: flex; !* Use flexbox para um layout mais controlado *!*/
-/*  justify-content: space-between;*/
-/*  padding: 200px;*/
-/*}*/
-
-/*.content {*/
-/*  max-width: 60%;*/
-/*  text-align: justify; !* Justifica o texto *!*/
-/*}*/
-
-/*.content h2 {*/
-/*  font-size: 1.8rem;*/
-/*  color: #00c2c6;*/
-/*  margin-bottom: 20px;*/
-/*}*/
-
-/*.content h2 span {*/
-/*  color: #00c2c6;*/
-/*  margin-right: 10px;*/
-/*}*/
-
-/*.content p {*/
-/*  font-size: 1rem;*/
-/*  line-height: 1.6;*/
-/*  margin-bottom: 15px;*/
-/*  color: #d3d3d3;*/
-/*}*/
-
-/*.content p a {*/
-/*  color: #00c2c6;*/
-/*  text-decoration: none;*/
-/*}*/
-
-/*.technologies {*/
-/*  display: grid;*/
-/*  grid-template-columns: repeat(2, 1fr);*/
-/*  gap: 10px;*/
-/*  list-style: none;*/
-/*  padding-left: 0;*/
-/*  margin-top: 20px;*/
-/*}*/
-
-/*.image {*/
-/*  position: relative; !* Adiciona a posição relativa se precisar mover a imagem *!*/
-/*}*/
-
-/*.image img {*/
-/*  width: 400px;*/
-/*  height: auto; !* Mantém a proporção da imagem *!*/
-/*  border-radius: 10px; !* Aplica o raio de borda de 10px a todos os cantos *!*/
-/*  position: relative; !* Necessário para que top funcione *!*/
-/*  top: 125px; !* Ajuste este valor conforme necessário *!*/
-/*}*/
-
-
-
-/*!*#linha {*!*/
-/*!*  padding-top: -2000px;*!*/
-/*!*  padding-left: 1000px;*!*/
-/*!*  width: 27%;*!*/
-/*!*  border-bottom: 1px solid rgb(84, 102, 241);*!*/
-/*!*}*!*/

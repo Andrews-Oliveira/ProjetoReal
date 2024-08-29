@@ -18,6 +18,8 @@ import {FormsModule} from "@angular/forms";
 // import { Layout2Component } from "./finalizacao/layout2/layout2.component";
 import { MenuLateralComponent } from './finalizacao/layout2/menu-lateral/menu-lateral.component';
 import { MenuLateral2Component } from './finalizacao/layout2/menu-lateral2/menu-lateral2.component';
+import {ApiService} from "./services/api.service";
+import {HttpClientModule} from "@angular/common/http";
 // import { NavBarComponent } from './finalizacao/layout2/nav-bar/nav-bar.component';
 // import { AuthLayoutrComponent } from './auth-layoutr/auth-layoutr.component';
 
@@ -46,9 +48,10 @@ import { MenuLateral2Component } from './finalizacao/layout2/menu-lateral2/menu-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

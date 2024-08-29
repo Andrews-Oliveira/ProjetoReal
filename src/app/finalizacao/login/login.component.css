@@ -1,20 +1,19 @@
 .container {
-  background-color: rgb(30, 30, 30); /* Fundo escuro com um pouco de transparência */
+  background-color: rgb(30, 30, 30);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 30px; /* Padding reduzido para manter o design mais compacto */
-  border-radius: 15px; /* Bordas arredondadas */
+  padding: 30px;
+  border-radius: 15px;
   color: #fff;
-  width: 90%; /* Ajustado a largura para 90% da tela */
-  max-width: 300px; /* Largura máxima reduzida */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra suave ao redor */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
-  text-align: center; /* Centraliza o texto */
+  width: 90%;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 
-/* Estilo para os inputs e selects */
 input {
   padding: 15px;
   border: none;
@@ -23,11 +22,10 @@ input {
   border-radius: 5px;
   background-color: #333;
   color: #fff;
-  width: 70%; /* Largura dos inputs ajustada para ocupar toda a largura do contêiner */
-  margin-bottom: 15px; /* Espaçamento inferior */
+  width: 70%;
+  margin-bottom: 15px;
 }
 
-/* Estilo para o botão */
 button {
   background-color: rgb(11, 125, 179);
   border: none;
@@ -37,25 +35,22 @@ button {
   color: white;
   font-size: 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Transição suave para hover */
+  transition: background-color 0.3s ease;
 }
 
-/* Estilo para o botão quando passa o mouse */
 button:hover {
   background-color: deepskyblue;
 }
 
-/* Estilo para mensagens de erro */
 .error-message {
-  color: #ef4d45; /* Cor de erro leve */
+  color: #ef4d45;
   font-size: 14px;
   margin-top: 5px;
-  text-align: left; /* Alinha a mensagem à esquerda */
+  text-align: left;
 }
 
-/* Estilo para inputs inválidos */
 input.ng-invalid.ng-touched {
-  border: 1px solid #ffdddd; /* Borda vermelha para campos inválidos */
+  border: 1px solid #ffdddd;
 }
 
 

@@ -8,99 +8,32 @@
     <!-- Primeira linha de campos -->
     <div class="form-row">
       <div class="form-group">
-        <input
-          type="text"
-          id="nome-completo"
-          name="nome-completo"
-          ngModel
-          required
-          placeholder="Nome Completo"
-          #nomeCompleto="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="nomeCompleto.invalid && (nomeCompleto.dirty || nomeCompleto.touched)">
-          <div *ngIf="nomeCompleto.errors?.['required']">O nome é obrigatório.</div>
-        </div>
+        <label for="nome-completo">Nome Completo</label>
+        <input type="text" id="nome-completo" name="nome-completo" ngModel required #nomeCompleto="ngModel" class="form-control" placeholder="Digite seu nome completo">
       </div>
       <div class="form-group">
-        <input
-          type="date"
-          id="nascimento"
-          name="nascimento"
-          ngModel
-          required
-          placeholder="Data de Nascimento"
-          #nascimento="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="nascimento.invalid && (nascimento.dirty || nascimento.touched)">
-          <div *ngIf="nascimento.errors?.['required']">A data de nascimento é obrigatória.</div>
-        </div>
+        <label for="nascimento">Data de Nascimento</label>
+        <input type="date" id="nascimento" name="nascimento" ngModel required #nascimento="ngModel" class="form-control" placeholder="Selecione a data de nascimento">
       </div>
       <div class="form-group">
-        <input
-          type="text"
-          id="cnh"
-          name="cnh"
-          ngModel
-          required
-          placeholder="CNH"
-          #cnh="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="cnh.invalid && (cnh.dirty || cnh.touched)">
-          <div *ngIf="cnh.errors?.['required']">A CNH é obrigatória.</div>
-        </div>
+        <label for="cnh">CNH</label>
+        <input type="text" id="cnh" name="cnh" ngModel required #cnh="ngModel" class="form-control" placeholder="Digite sua CNH">
       </div>
     </div>
 
     <!-- Segunda linha de campos -->
     <div class="form-row">
       <div class="form-group">
-        <input
-          type="text"
-          id="endereco"
-          name="endereco"
-          ngModel
-          required
-          placeholder="Endereço Residencial"
-          #endereco="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="endereco.invalid && (endereco.dirty || endereco.touched)">
-          <div *ngIf="endereco.errors?.['required']">O endereço é obrigatório.</div>
-        </div>
+        <label for="endereco">Endereço Residencial</label>
+        <input type="text" id="endereco" name="endereco" ngModel required #endereco="ngModel" class="form-control" placeholder="Digite seu endereço residencial">
       </div>
       <div class="form-group">
-        <input
-          type="text"
-          id="telefone"
-          name="telefone"
-          ngModel
-          required
-          placeholder="Telefone/Celular"
-          #telefone="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="telefone.invalid && (telefone.dirty || telefone.touched)">
-          <div *ngIf="telefone.errors?.['required']">O telefone é obrigatório.</div>
-        </div>
+        <label for="telefone">Telefone/Celular</label>
+        <input type="text" id="telefone" name="telefone" ngModel required #telefone="ngModel" class="form-control" placeholder="Digite seu telefone">
       </div>
       <div class="form-group">
-        <input
-          type="email"
-          id="email"
-          name="email"
-          ngModel
-          required
-          placeholder="E-mail"
-          #email="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="email.invalid && (email.dirty || email.touched)">
-          <div *ngIf="email.errors?.['required']">O e-mail é obrigatório.</div>
-          <div *ngIf="email.errors?.['email']">O e-mail deve ser válido.</div>
-        </div>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" ngModel required #email="ngModel" class="form-control" placeholder="Digite seu e-mail">
       </div>
     </div>
 
@@ -109,164 +42,64 @@
     <!-- Terceira linha de campos -->
     <div class="form-row">
       <div class="form-group">
-        <input
-          type="text"
-          id="empresa"
-          name="empresa"
-          ngModel
-          required
-          placeholder="Nome da Empresa"
-          #empresa="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="empresa.invalid && (empresa.dirty || empresa.touched)">
-          <div *ngIf="empresa.errors?.['required']">O nome da empresa é obrigatório.</div>
-        </div>
+        <label for="empresa">Nome da Empresa</label>
+        <input type="text" id="empresa" name="empresa" ngModel required #empresa="ngModel" class="form-control" placeholder="Digite o nome da empresa">
       </div>
       <div class="form-group">
-        <select
-          id="turnos"
-          name="turnos"
-          ngModel
-          required
-          #turnos="ngModel"
-          class="form-control"
-        >
+        <label for="turnos">Turno Comercial</label>
+        <select id="turnos" name="turnos" ngModel required #turnos="ngModel" class="form-control">
           <option value="" disabled selected>Selecione um Turno Comercial</option>
           <option value="1">Turno Comercial 1</option>
           <option value="2">Turno Comercial 2</option>
           <option value="3">Turno Comercial 3</option>
         </select>
-        <div class="error-message" *ngIf="turnos.invalid && (turnos.dirty || turnos.touched)">
-          <div *ngIf="turnos.errors?.['required']">Selecione um turno.</div>
-        </div>
       </div>
       <div class="form-group">
-        <input
-          type="text"
-          id="placa"
-          name="placa"
-          ngModel
-          required
-          placeholder="Placa do Veículo"
-          #placa="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="placa.invalid && (placa.dirty || placa.touched)">
-          <div *ngIf="placa.errors?.['required']">A placa do veículo é obrigatória.</div>
-        </div>
+        <label for="placa">Placa do Veículo</label>
+        <input type="text" id="placa" name="placa" ngModel required #placa="ngModel" class="form-control" placeholder="Digite a placa do veículo">
       </div>
     </div>
 
     <!-- Quarta linha de campos -->
     <div class="form-row">
       <div class="form-group">
-        <input
-          type="text"
-          id="rota"
-          name="rota"
-          ngModel
-          required
-          placeholder="Número da Rota"
-          #rota="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="rota.invalid && (rota.dirty || rota.touched)">
-          <div *ngIf="rota.errors?.['required']">O número da rota é obrigatório.</div>
-        </div>
+        <label for="rota">Número da Rota</label>
+        <input type="text" id="rota" name="rota" ngModel required #rota="ngModel" class="form-control" placeholder="Digite o número da rota">
       </div>
       <div class="form-group">
-        <input
-          type="number"
-          id="funcionarios"
-          name="funcionarios"
-          ngModel
-          required
-          placeholder="Quantidade de Funcionários"
-          #funcionarios="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="funcionarios.invalid && (funcionarios.dirty || funcionarios.touched)">
-          <div *ngIf="funcionarios.errors?.['required']">A quantidade de funcionários é obrigatória.</div>
-        </div>
+        <label for="funcionarios">Quantidade de Funcionários</label>
+        <input type="number" id="funcionarios" name="funcionarios" ngModel required #funcionarios="ngModel" class="form-control" placeholder="Digite a quantidade de funcionários">
       </div>
       <div class="form-group">
-        <input
-          type="date"
-          id="data"
-          name="data"
-          ngModel
-          required
-          placeholder="Data da Rota"
-          #data="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="data.invalid && (data.dirty || data.touched)">
-          <div *ngIf="data.errors?.['required']">A data da rota é obrigatória.</div>
-        </div>
+        <label for="data">Data da Rota</label>
+        <input type="date" id="data" name="data" ngModel required #data="ngModel" class="form-control" placeholder="Selecione a data da rota">
       </div>
     </div>
 
     <!-- Quinta linha de campos -->
     <div class="form-row">
       <div class="form-group">
-        <input
-          type="time"
-          id="inicio"
-          name="inicio"
-          ngModel
-          required
-          placeholder="Início da Rota"
-          #inicio="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="inicio.invalid && (inicio.dirty || inicio.touched)">
-          <div *ngIf="inicio.errors?.['required']">O início da rota é obrigatório.</div>
-        </div>
+        <label for="inicio">Início da Rota</label>
+        <input type="time" id="inicio" name="inicio" ngModel required #inicio="ngModel" class="form-control" placeholder="Selecione o início da rota">
       </div>
       <div class="form-group">
-        <input
-          type="time"
-          id="fim"
-          name="fim"
-          ngModel
-          required
-          placeholder="Fim da Rota"
-          #fim="ngModel"
-          class="form-control"
-        >
-        <div class="error-message" *ngIf="fim.invalid && (fim.dirty || fim.touched)">
-          <div *ngIf="fim.errors?.['required']">O fim da rota é obrigatório.</div>
-        </div>
+        <label for="fim">Fim da Rota</label>
+        <input type="time" id="fim" name="fim" ngModel required #fim="ngModel" class="form-control" placeholder="Selecione o fim da rota">
       </div>
     </div>
 
     <!-- Linha final com textarea -->
     <div class="form-row">
       <div class="form-group" style="flex: 1 1 100%;">
-        <textarea
-          id="rotas-frequentes"
-          name="rotas-frequentes"
-          ngModel
-          required
-          placeholder="Rotas Frequentes"
-          #rotasFrequentes="ngModel"
-          class="form-control"
-        ></textarea>
-        <div class="error-message" *ngIf="rotasFrequentes.invalid && (rotasFrequentes.dirty || rotasFrequentes.touched)">
-          <div *ngIf="rotasFrequentes.errors?.['required']">Este campo é obrigatório.</div>
-        </div>
+        <label for="rotas-frequentes">Rotas Frequentes</label>
+        <textarea id="rotas-frequentes" name="rotas-frequentes" ngModel required #rotasFrequentes="ngModel" class="form-control" placeholder="Digite as rotas frequentes"></textarea>
       </div>
     </div>
 
-    <button
-      type="submit"
-      [disabled]="!form.valid"
-      class="submit-button"
-    >
+    <button type="submit" [disabled]="!form.valid" class="submit-button">
       Enviar
     </button>
   </div>
 </form>
 
-<app-menu-lateral></app-menu-lateral>
+<app-menu-lateral/>
