@@ -23,6 +23,19 @@ import {HttpClientModule} from "@angular/common/http";
 // import { NavBarComponent } from './finalizacao/layout2/nav-bar/nav-bar.component';
 // import { AuthLayoutrComponent } from './auth-layoutr/auth-layoutr.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { CadastradosComponent } from './finalizacao/cadastrados/cadastrados.component';
+import {MatCard, MatCardContent, MatCardHeader, MatCardModule} from "@angular/material/card";
+import {MatToolbar, MatToolbarModule} from "@angular/material/toolbar";
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell, MatHeaderCellDef,
+  MatHeaderRow, MatHeaderRowDef,
+  MatRow, MatRowDef,
+  MatTable, MatTableModule
+} from "@angular/material/table";
+import {MatButtonModule} from "@angular/material/button";
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +53,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     // Layout2Component,
     MenuLateralComponent,
     MenuLateral2Component,
+    CadastradosComponent,
 
     // AuthLayoutrComponent,
 
@@ -50,6 +64,24 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatCardContent,
+    MatToolbar,
+    MatCardHeader,
+    MatCard,
+    MatTable,
+    MatColumnDef,
+    MatHeaderCell,
+    MatCell,
+    MatHeaderRow,
+    MatRow,
+    MatCellDef,
+    MatHeaderCellDef,
+    MatHeaderRowDef,
+    MatRowDef,
+    MatTableModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],

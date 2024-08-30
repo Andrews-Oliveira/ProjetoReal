@@ -1,7 +1,10 @@
 <!-- sidebar.component.html -->
 <div class="sidebar" [ngClass]="{'active': isSidebarOpen}">
   <ul>
-    <li><a href="#" (click)="logout()">Sair</a></li>
+    <li><a [routerLink]="'/login'" (click)="logout()">Sair</a></li>
+    <li><a [routerLink]="'/cadastrados'">Cadastrados</a></li>
+
+
 
   </ul>
 </div>

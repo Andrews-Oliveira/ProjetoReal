@@ -1,0 +1,151 @@
+<mat-card>
+  <mat-card-header>
+    <mat-toolbar color="primary">
+      <span>Cadastrados</span>
+    </mat-toolbar>
+  </mat-card-header>
+  <mat-card-content>
+    <!-- Tabela de Motoristas -->
+    <mat-card-header>
+      <mat-toolbar color="primary">
+        <span>Motoristas</span>
+      </mat-toolbar>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="motoristas" class="mat-elevation-z8 custom-table">
+
+        <!-- Colunas da Tabela de Motoristas -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let element">{{element.id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{element.nome}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cpf">
+          <th mat-header-cell *matHeaderCellDef>CPF</th>
+          <td mat-cell *matCellDef="let element">{{element.cpf}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cnh">
+          <th mat-header-cell *matHeaderCellDef>CNH</th>
+          <td mat-cell *matCellDef="let element">{{element.cnh}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="data_nascimento">
+          <th mat-header-cell *matHeaderCellDef>Data de Nascimento</th>
+          <td mat-cell *matCellDef="let element">{{element.data_nascimento}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="endereco">
+          <th mat-header-cell *matHeaderCellDef>Endereço</th>
+          <td mat-cell *matCellDef="let element">{{element.endereco}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="telefone">
+          <th mat-header-cell *matHeaderCellDef>Telefone</th>
+          <td mat-cell *matCellDef="let element">{{element.telefone}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Email</th>
+          <td mat-cell *matCellDef="let element">{{element.email}}</td>
+        </ng-container>
+
+        <!-- Coluna de Ações -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Ações</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-button (click)="removeMotorista(element.id)">Remover</button>
+          </td>
+        </ng-container>
+
+
+        <!-- Linhas da Tabela de Motoristas -->
+        <tr mat-header-row *matHeaderRowDef="displayedMotoristaColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedMotoristaColumns;"></tr>
+      </table>
+    </mat-card-content>
+
+    <!-- Tabela de Fábricas -->
+    <mat-card-header>
+      <mat-toolbar color="primary">
+        <span>Fábricas</span>
+      </mat-toolbar>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="fabricas" class="mat-elevation-z8 custom-table">
+
+        <!-- Colunas da Tabela de Fábricas -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let element">{{element.id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="nome_fabrica">
+          <th mat-header-cell *matHeaderCellDef>Nome da Fábrica</th>
+          <td mat-cell *matCellDef="let element">{{element.nome}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="turno_fabrica">
+          <th mat-header-cell *matHeaderCellDef>Turno Comercial</th>
+          <td mat-cell *matCellDef="let element">{{element.turno_fabrica}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="placa_veiculo">
+          <th mat-header-cell *matHeaderCellDef>Placa do Veículo</th>
+          <td mat-cell *matCellDef="let element">{{element.placa_veiculo}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="numero_rota">
+          <th mat-header-cell *matHeaderCellDef>Número da Rota</th>
+          <td mat-cell *matCellDef="let element">{{element.numero_rota}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="quantidade_funcionarios">
+          <th mat-header-cell *matHeaderCellDef>Quantidade de Funcionários</th>
+          <td mat-cell *matCellDef="let element">{{element.quantidade_funcionarios}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="data">
+          <th mat-header-cell *matHeaderCellDef>Data</th>
+          <td mat-cell *matCellDef="let element">{{element.data}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="hora_inicio">
+          <th mat-header-cell *matHeaderCellDef>Hora de Início</th>
+          <td mat-cell *matCellDef="let element">{{element.hora_inicio}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="hora_fim">
+          <th mat-header-cell *matHeaderCellDef>Hora de Término</th>
+          <td mat-cell *matCellDef="let element">{{element.hora_fim}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="rotas_frequentes">
+          <th mat-header-cell *matHeaderCellDef>Rotas Frequentes</th>
+          <td mat-cell *matCellDef="let element">{{element.rotas_frequentes}}</td>
+        </ng-container>
+
+        <!-- Coluna de Ações -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Ações</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-button (click)="removeFabrica(element.id)">Remover</button>
+          </td>
+        </ng-container>
+
+        <!-- Linhas da Tabela de Fábricas -->
+        <tr mat-header-row *matHeaderRowDef="displayedFabricaColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedFabricaColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card-content>
+</mat-card>
+<br>
+<button type="button" [routerLink]="['/registro']" class="submit-button">
+  VOLTAR
+</button>
